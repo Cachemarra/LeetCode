@@ -54,25 +54,30 @@ Constraints:
 
 class Solution:
 
-    def removeElement(self, full_list: list(int), delete_number: int) -> int:
+    def removeElement(self, full_list: list(), delete_number: int) -> int:
         # variable to store the size of the list
         list_len = len(full_list)
-
-        # If an empty list is passed
+        value_key = 0
+        # If an empty list is passed it return a 0
         if not full_list:
-            return full_list
+            return 0
 
         # Else
         else:
             # Main loop to iterate through the list
-            for i, item in enumerate(full_list):
-                # Check if the item is the same as the number to delete
-                if item == delete_number:
-                    full_list.pop(i)
+            for i in range(len(full_list)):
+
+                # Check if the list number is the same as the number to delete
+                if full_list[value_key] == delete_number:
+                    # If so, it pop it and append a '_'.
+                    full_list.pop(value_key)
                     full_list.append('_')
                     list_len -= 1
+                else:
+                    # If not, the index increment by 1.
+                    value_key += 1
 
-            return full_list, list_len
+            return list_len
 
 
 
