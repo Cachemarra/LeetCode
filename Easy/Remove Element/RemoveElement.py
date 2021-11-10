@@ -50,14 +50,43 @@ Constraints:
 0 <= nums[i] <= 50
 0 <= val <= 100
 
-
-
-
 """
 
+class Solution:
+
+    def removeElement(self, full_list: list(int), delete_number: int) -> int:
+        # variable to store the size of the list
+        list_len = len(full_list)
+
+        # If an empty list is passed
+        if not full_list:
+            return full_list
+
+        # Else
+        else:
+            # Main loop to iterate through the list
+            for i, item in enumerate(full_list):
+                # Check if the item is the same as the number to delete
+                if item == delete_number:
+                    full_list.pop(i)
+                    full_list.append('_')
+                    list_len -= 1
+
+            return full_list, list_len
 
 
 
+# Funcionamiento standard.
+if __name__ == '__main__':
+    
+    # Listas de prubeas
+    nums = [3, 2, 2, 3]
+    nums = [0, 1, 2, 2, 3, 0, 4, 2]
+    
+    # Creamos el objeto y llamamos a su metodo
+    solucion = Solution()
+    ans_list, ans_size = solucion.removeElement(nums, 2)
 
 
-
+    print('Resultado: ')
+    print(f'List: {ans_list}, with size: {ans_size}')
