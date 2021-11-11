@@ -56,7 +56,11 @@ class Solution:
 if __name__ == '__main__':
 
     # Test inputs
+<<<<<<< HEAD
     n = [7, 3, 5, 0, 10, 4, 12]
+=======
+    n = [3, 5, 0, 10, 4, 12]
+>>>>>>> FactorialTrailingZeroes
 
     # Create a Solution object
     solution = Solution()
