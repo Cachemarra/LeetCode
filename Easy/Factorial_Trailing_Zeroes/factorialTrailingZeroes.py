@@ -25,6 +25,7 @@ class Solution:
                 return 0
             # Otherwise
             else:
+                # TODO trailing zeroes are CONSECUTIVE zeroes at the end.
                 while(n != 0):
                     # get the remainder
                     modulus = n % 10
@@ -34,9 +35,9 @@ class Solution:
                         zeroes += 1
                     # Otherwise
                     else:
-                        n = n - modulus
+                        return zeroes
                     # reduce a decimal.
-                    n = n / 10
+                    n = n // 10
                 
                 # Once the loop has finished, we have our answer
                 return zeroes
@@ -56,11 +57,7 @@ class Solution:
 if __name__ == '__main__':
 
     # Test inputs
-<<<<<<< HEAD
-    n = [7, 3, 5, 0, 10, 4, 12]
-=======
-    n = [3, 5, 0, 10, 4, 12]
->>>>>>> FactorialTrailingZeroes
+    n = [7, 3, 5, 0, 10, 4, 12, 30]
 
     # Create a Solution object
     solution = Solution()
