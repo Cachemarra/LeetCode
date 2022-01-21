@@ -1,10 +1,17 @@
+#%% Clase solucion
 class Solution:
     def lengthOfLastWord(self, s: str) -> int:
+        # Create a list of words
         list_of_words = s.split(' ')
-        
+
+        # Clean all spaces
+        clean_list = [x for x in list_of_words if x]
+
+        print(f'list_of_words: {clean_list}')
+        return len(clean_list[-1])
 
 
-
+#%% Pruebas
 if __name__ == '__main__':
 
     test_cases = ["Hello World", "   fly me   to   the moon  ", "luffy is still joyboy"]
@@ -23,3 +30,5 @@ if __name__ == '__main__':
 
     print(f'We passed {count} out of {len(test_cases)} test cases')
 
+
+# %%
