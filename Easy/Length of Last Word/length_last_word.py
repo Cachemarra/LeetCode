@@ -1,5 +1,7 @@
 #%% Clase solucion
 class Solution:
+    # First Solution.
+    '''
     def lengthOfLastWord(self, s: str) -> int:
         # Create a list of words
         list_of_words = s.split(' ')
@@ -9,6 +11,11 @@ class Solution:
 
         print(f'list_of_words: {clean_list}')
         return len(clean_list[-1])
+    '''
+    # Second Solution. Shortest.
+    def lengthOfLastWord(self, s: str) -> int:
+        # Create a list of words
+        return len(s.split()[-1])
 
 
 #%% Pruebas
@@ -29,3 +36,5 @@ if __name__ == '__main__':
         print('\n')
 
     print(f'We passed {count} out of {len(test_cases)} test cases')
+
+# %%
