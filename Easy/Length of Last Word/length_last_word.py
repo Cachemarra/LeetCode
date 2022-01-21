@@ -29,6 +29,3 @@ if __name__ == '__main__':
         print('\n')
 
     print(f'We passed {count} out of {len(test_cases)} test cases')
-
-
-# %%
