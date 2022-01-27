@@ -17,9 +17,8 @@ def pyramid(n: int) -> None:
         if row != 1:            
             actual_row = '*' * (2 * row-1)
             actual_row = actual_row.center(n*2, ' ')
-
             print(actual_row)
-
+            
         else:
             print('*'.center(n*2, ' '))
 
