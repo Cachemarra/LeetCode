@@ -1,7 +1,4 @@
 #%% Def function of the full pyramid script
-from re import A
-
-
 def pyramid(n: int) -> None:
     """
     Print a full pyramid based on the n number of rows.
@@ -23,17 +20,10 @@ def pyramid(n: int) -> None:
             print('*'.center(n*2, ' '))
 
 
-
-
-#%%
+#%% Main func
 if __name__ == '__main__':
 
     for i in range(5):
         print(f'Test case {i}')
         pyramid(i+1)
         print('\n')
-
-    
-
-
-# %%
