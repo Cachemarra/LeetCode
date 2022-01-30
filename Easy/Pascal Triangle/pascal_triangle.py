@@ -2,9 +2,9 @@
 from math import factorial
 
 class Solution:
-    def generate(self, numRows: int) -> List[List[int]]:
+    def generate(self, numRows: int):
         # If just want the first column return a 1
-        if numRows == 1:
+        if numRows <= 1:
             return [[1]]
         
         # For other number of rows
@@ -12,20 +12,19 @@ class Solution:
             if numRows == 2:
                 return [[1], [1, 1]]
             else:
+                # I'll use the formula to calculate the value
+                pascal_val = lambda r, c: int(factorial(r) / (factorial(c) * factorial(r - c)))
+
                 answer = [[1], [1, 1]] # The first two columns
-                items = 2
-                for i in
+                items = 3
+                for i in range(numRows):
+                    i += 3
+                    ans = [list(map(pascal_val, i, x)) for x in range(items)]
+                    print(ans)
+                    
+        return ans 
 
-            row_ans = [1]
-
-        # I'll use the formula to calculate the value
-        pascal_val = lambda r, c: int(factorial(r) / (factorial(c) * factorial(r - c)))
-
-
-
-        return 
-
-
+#%%
 # ------------------------- Pruebas
 # Test
 if __name__ == '__main__':
