@@ -36,6 +36,17 @@ def solucion(n, a, b, c):
 
 #%% Probamos el método
 if __name__ == '__main__':
+    ''' Pruebas
+    
+    n = 5; a, b, c = (1, 2, 3); result = 11
+
+    n = 4; a, b, c = (1, 1, 1); result = 3
+
+    n = 3; a, b, c = (4, 6, 8); result = 8
+
+    n = 5; a, b, c = (46, 68, 100); result = 382
+    '''
+
     # Probamos el método
     n = 5
     a, b, c = (46, 68, 100)
